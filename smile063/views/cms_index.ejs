@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Prologue by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/cms_assets/css/main.css" />
+
+		<style>
+
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="/avatar.jpg" alt="" /></span>
+							<h1 id="title">김동현</h1>
+							<button onclick="location.href='/'">main</button>
+							<p>cisone it</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Magazine</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Upload</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">ㅡㅡ</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">ㅡㅡ</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<div class="row">
+								<div class="col-4 col-12-mobile" style="display: flex; margin-top: 20px;">
+
+                                    <% list1.forEach(function (item, index) { %>
+                                        <article class="item">
+                                            <a href="#" class="image fit"><img src="/<%= item.thumbnail %>" style="width: 250px;"></a>
+                                            <header>
+                                                <h3><%= item.title%></h3>
+                                            </header>
+                                        </article>
+                                    <% }); %>
+											
+								</div>
+								<div class="col-4 col-12-mobile" style="display: flex; margin-top: -100px; margin-bottom:133px;">
+									
+                                    <% list2.forEach(function (item, index) { %>
+                                        <article class="item">
+                                            <img src="/<%= item.thumbnail %>" style="width: 250px;">
+                                            <header>
+                                                <h3><%= item.title%></h3>
+                                            </header>
+                                        </article>
+                                    <% }); %>
+
+								</div>					
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<form method="post" action="/upload" enctype="multipart/form-data">
+								<div class="row">
+									<div class="col-6 col-12-mobile"><input type="file" name="images" webkitdirectory directory multiple></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="foldername" placeholder="폴더 이름"></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="title" placeholder="제목" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title1" placeholder="부제목1" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title2" placeholder="부제목2" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title3" placeholder="부제목3" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title4" placeholder="부제목4" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title_content1" placeholder="부제목 내용1" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title_content2" placeholder="부제목 내용2" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title_content3" placeholder="부제목 내용3" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="sub_title_content4" placeholder="부제목 내용4" /></div>
+									<div class="col-12">
+										<input type="submit" value="Upload" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three" style="display: none;">
+						<div class="container">
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four" style="display: none;">
+						<div class="container">					
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+			</div>
+
+		<!-- Scripts -->
+			<script src="/cms_assets/js/jquery.min.js"></script>
+			<script src="/cms_assets/js/jquery.scrolly.min.js"></script>
+			<script src="/cms_assets/js/jquery.scrollex.min.js"></script>
+			<script src="/cms_assets/js/browser.min.js"></script>
+			<script src="/cms_assets/js/breakpoints.min.js"></script>
+			<script src="/cms_assets/js/util.js"></script>
+			<script src="/cms_assets/js/main.js"></script>
+
+	</body>
+</html>
